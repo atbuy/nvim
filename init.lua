@@ -22,8 +22,14 @@ require "plugins"
 
 
 -- Open nvim tree automatically
-require("nvim-tree.api").tree.open()
+local nvim_tree = require("nvim-tree.api")
+nvim_tree.tree.open()
+nvim_tree.tree.focus()
 
--- Change colorscheme for all windows
-vim.cmd 'colorscheme material-darker'
+-- Change colorscheme for all windows (except nvim-tree)
+vim.cmd("colorscheme material-darker")
+
+
+-- Load keymaps
+require("keymaps")
 
