@@ -25,5 +25,9 @@ keymap("n", "<leader>q1", ":colorscheme material-darker<CR>", opts)
 
 -- Exit neovim
 opts.desc = "Exit neovim"
-keymap("n", "<leader>q2", ":qa<CR>", opts)
+keymap("n", "<leader>q2", "<Esc>:qa<CR>", opts)
+
+-- Save file in insert mode
+opts.desc = "Save file"
+keymap("i", "<C-s>", "<Esc>:w<CR>i", opts)
 
