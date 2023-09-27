@@ -19,6 +19,11 @@ local keymap = vim.keymap.set
 --   command_mode = "c",
 
 
+-- Set colortheme, because it doesn't work on startup
+opts.desc = "Set color scheme to preferred theme"
+keymap("n", "<leader>q1", ":colorscheme material-darker<CR>", opts)
+
 -- Exit neovim
-keymap("n", "<leader>2", ":qa<CR>", opts)
+opts.desc = "Exit neovim"
+keymap("n", "<leader>q2", ":qa<CR>", opts)
 

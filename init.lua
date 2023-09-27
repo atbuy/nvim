@@ -28,6 +28,7 @@ nvim_tree.tree.focus()
 
 -- Change colorscheme for all windows (except nvim-tree)
 vim.cmd("colorscheme material-darker")
+vim.cmd("colorscheme material-darker")
 
 
 -- Load keymaps
