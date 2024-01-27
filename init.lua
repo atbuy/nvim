@@ -10,7 +10,6 @@ require("core.utils").load_mappings()
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
--- bootstrap lazy.nvim!
 if not vim.loop.fs_stat(lazypath) then
   require("core.bootstrap").gen_chadrc_template()
   require("core.bootstrap").lazy(lazypath)
@@ -42,10 +41,10 @@ require("nvim-web-devicons").setup()
 vim.api.nvim_create_autocmd("FileType", { pattern = "TelescopeResults", command = [[setlocal nofoldenable]] })
 
 -- Setup better-comments
--- local better_comment_opts = require("custom.configs.better-comments")
--- require("better-comment").Setup({
---   tags = better_comment_opts
--- })
+local better_comment_opts = require("custom.configs.better-comments")
+require("better-comment").Setup({
+  tags = better_comment_opts
+})
 
 -- Load keymaps
 require("keymaps")

@@ -9,6 +9,7 @@ local options = {
       "--line-number",
       "--column",
       "--smart-case",
+      "--no-ignore-vcs"
     },
     prompt_prefix = "   ",
     selection_caret = "  ",
@@ -17,6 +18,7 @@ local options = {
     selection_strategy = "reset",
     sorting_strategy = "ascending",
     layout_strategy = "horizontal",
+    hidden = true,
     layout_config = {
       horizontal = {
         prompt_position = "top",
