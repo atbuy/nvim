@@ -20,16 +20,32 @@ dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
+-- Set to relational line numbers
+vim.cmd("set rnu!")
+
+-- Set foldmethod to indent and open all folds
+vim.cmd("set foldmethod=indent")
+vim.cmd("set foldlevel=20")
+
 
 -- Open nvim tree automatically
 local nvim_tree = require("nvim-tree.api")
 nvim_tree.tree.open()
 nvim_tree.tree.focus()
 
--- Change colorscheme for all windows (except nvim-tree)
-vim.cmd("colorscheme material-darker")
-vim.cmd("colorscheme material-darker")
+-- Setup diffview
+require("diffview").setup()
+require("nvim-web-devicons").setup()
 
+
+-- Disable folds in Telescope
+vim.api.nvim_create_autocmd("FileType", { pattern = "TelescopeResults", command = [[setlocal nofoldenable]] })
+
+-- Setup better-comments
+-- local better_comment_opts = require("custom.configs.better-comments")
+-- require("better-comment").Setup({
+--   tags = better_comment_opts
+-- })
 
 -- Load keymaps
 require("keymaps")

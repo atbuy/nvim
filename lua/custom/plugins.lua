@@ -21,11 +21,28 @@ local plugins = {
     end
   },
   {
+    "Djancyp/better-comments.nvim"
+  },
+  {
+    "sindrets/diffview.nvim"
+  },
+  {
+    "nvim-tree/nvim-web-devicons",
+  },
+  {
     "mfussenegger/nvim-dap",
     config = function (_, opts)
       require("core.utils").load_mappings("dap")
     end
-
+  },
+  {
+    "leoluz/nvim-dap-go",
+    ft = {"go"},
+    dependencies = "mfussenegger/nvim-dap",
+    config = function (_, opts)
+      require("dap-go").setup(opts)
+      require("core.utils").load_mappings("dap_go")
+    end
   },
   {
     "mfussenegger/nvim-dap-python",
@@ -39,6 +56,13 @@ local plugins = {
       require("dap-python").setup(path)
       require("core.utils").load_mappings("dap_python")
     end,
+  },
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
@@ -60,7 +84,10 @@ local plugins = {
         "pyright",
 
         -- Go dependencies
-        "gopls"
+        "gopls",
+
+        -- Rust dependencies
+        "rust-analyzer",
       },
     },
   },

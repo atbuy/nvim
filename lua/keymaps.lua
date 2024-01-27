@@ -31,3 +31,14 @@ keymap("n", "<leader>q2", "<Esc>:qa<CR>", opts)
 opts.desc = "Save file"
 keymap("i", "<C-s>", "<Esc>:w<CR>i", opts)
 
+-- Format json
+opts.desc = "Format JSON file"
+keymap("n", "<leader>fj", ":%!jq -S .<CR>", opts)
+
+-- Diffview open and close
+opts.desc = "Open Diffview"
+keymap("n", "<leader>dio", "<Esc>:DiffviewOpen<CR>", opts)
+
+opts.desc = "Close Diffview"
+keymap("n", "<leader>dic", "<Esc>:DiffviewClose<CR>", opts)
+
