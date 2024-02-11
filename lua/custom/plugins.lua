@@ -20,15 +20,10 @@ local plugins = {
       end
     end
   },
-  {
-    "Djancyp/better-comments.nvim"
-  },
-  {
-    "sindrets/diffview.nvim"
-  },
-  {
-    "nvim-tree/nvim-web-devicons",
-  },
+  { "astral-sh/ruff-lsp" },
+  { "Djancyp/better-comments.nvim" },
+  { "sindrets/diffview.nvim" },
+  { "nvim-tree/nvim-web-devicons" },
   {
     "mfussenegger/nvim-dap",
     config = function (_, opts)
@@ -81,6 +76,7 @@ local plugins = {
         "debugpy",
         "mypy",
         "ruff",
+        "ruff-lsp",
         "pyright",
 
         -- Go dependencies

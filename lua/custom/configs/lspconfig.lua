@@ -20,6 +20,18 @@ lspconfig.pyright.setup({
   }
 })
 
+lspconfig.ruff_lsp.setup({
+  on_attach = function(client, bufnr)
+  end,
+  capabilities = capabilities,
+  filetypes = { "python" },
+  init_options = {
+    settings = {
+      args = {}
+    }
+  }
+})
+
 -- Go
 lspconfig.gopls.setup {
   on_attach = on_attach,

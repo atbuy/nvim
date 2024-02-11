@@ -24,7 +24,9 @@ vim.cmd("set rnu!")
 
 -- Set foldmethod to indent and open all folds
 vim.cmd("set foldmethod=indent")
+vim.cmd("set foldcolumn=0")
 vim.cmd("set foldlevel=20")
+vim.cmd("set foldenable")
 
 
 -- Open nvim tree automatically
