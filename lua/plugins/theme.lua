@@ -8,12 +8,11 @@ return {
   lazy = false,
   priority = 1000,
   config = function()
-    local guifg = "#aed5fc"
     -- vim.cmd("colorscheme onedark")
     vim.cmd("colorscheme catppuccin-mocha")
     -- vim.cmd("colorscheme kanagawa")
     -- vim.cmd("colorscheme material-darker")
     -- vim.cmd("colorscheme tokyonight-storm")
-    vim.cmd("highlight TabLineSel guifg=" .. guifg)
+    vim.cmd("highlight TabLineSel guifg=#aed5fc")
   end,
 }
