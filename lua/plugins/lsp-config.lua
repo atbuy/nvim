@@ -1,5 +1,6 @@
 local mason_packages = {
   -- Python
+  "pyright",
   "ruff-lsp",
 
   -- Go
@@ -87,6 +88,15 @@ return {
       lspconfig.cssls.setup({ capabilities = capabilities })
       lspconfig.emmet_ls.setup({})
       -- lspconfig.tailwindcss.setup({})
+      lspconfig.pyright.setup({
+        settings = {
+          python = {
+            analysis = {
+              typeCheckingMode = "off",
+            },
+          },
+        },
+      })
       lspconfig.ruff_lsp.setup({
         capabilities = capabilities,
         filetypes = { "python" },

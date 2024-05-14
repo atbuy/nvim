@@ -43,7 +43,7 @@ return {
 						side_padding = 0,
 						-- winhighlight = "Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel",
 						scrollbar = false,
-            preselect = false,
+						preselect = false,
 					},
 					documentation = {
 						border = border("CmpDocBorder"),
@@ -95,8 +95,9 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
-				}, {
 					{ name = "buffer" },
+					{ name = "nvim_lua" },
+					{ name = "path" },
 				}),
 			})
 		end,
