@@ -40,4 +40,4 @@ end, opts)
 opts.desc = "Add file to harpoon"
 keymap("n", "<leader>ha", function()
 	harpoon:list():add()
-end)
+end, opts)

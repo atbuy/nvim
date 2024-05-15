@@ -4,7 +4,7 @@ return {
 	config = function()
 		local buftabline = require("buftabline")
 		buftabline.setup({
-			tab_format = "#{i} #{b}",
+			tab_format = " #{i} #{b} ",
 		})
 
 		require("keymaps.buftabline")
