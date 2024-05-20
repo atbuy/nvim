@@ -12,9 +12,13 @@ return {
         null_ls.builtins.formatting.golines,
         null_ls.builtins.formatting.goimports_reviser,
 
+        -- Rust
+        -- null_ls.builtins.formatting.rustfmt,
+        -- null_ls.builtins.diagnostics.ltrs,
+
         -- Javascript
         null_ls.builtins.formatting.prettier,
-        require("none-ls.diagnostics.eslint_d"),
+        -- require("none-ls.diagnostics.eslint_d"),
       },
     })
 

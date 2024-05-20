@@ -5,6 +5,7 @@ local function on_attach(bufnr)
 	-- -- Delete default mapping <C-e>
 	vim.keymap.del("n", "<C-e>", { buffer = bufnr })
 	vim.keymap.del("n", "f", { buffer = bufnr })
+	vim.keymap.del("n", "<tab>", { buffer = bufnr })
 end
 
 return {
