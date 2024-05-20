@@ -6,10 +6,10 @@ noremap = true,
 local keymap = vim.keymap.set
 
 opts.desc = "Go to next buffer"
-keymap("n", "<tab>", ":BufNext<CR>", opts)
+keymap("n", "<Tab>", ":BufferNext<CR>", opts)
 
 opts.desc = "Go to previous buffer"
-keymap("n", "<S-tab>", ":BufPrev<CR>", opts)
+keymap("n", "<S-Tab>", ":BufferPrevious<CR>", opts)
 
 opts.desc = "Close current buffer"
-keymap("n", "<leader>x", ":enew<bar>bd #<CR>", opts)
+keymap("n", "X", ":BufferClose<CR>", opts)
