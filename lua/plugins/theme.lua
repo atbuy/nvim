@@ -9,7 +9,7 @@ return {
   priority = 1000,
   config = function()
     -- vim.cmd("colorscheme onedark")
-    vim.cmd("colorscheme catppuccin-macchiato")
+    vim.cmd("colorscheme catppuccin-frappe")
     -- vim.cmd("colorscheme kanagawa")
     -- vim.cmd("colorscheme material-darker")
     -- vim.cmd("colorscheme tokyonight-storm")

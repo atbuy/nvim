@@ -4,7 +4,7 @@ return {
 		require("lualine").setup({
 			options = {
         globalstatus = true,
-				theme = "onedark",
+				theme = "OceanicNext",
 			},
 		})
 	end,
